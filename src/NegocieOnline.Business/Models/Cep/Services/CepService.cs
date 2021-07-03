@@ -2,6 +2,7 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using NegocieOnline.Business.Core.Notifications;
 using NegocieOnline.Business.Core.Service;
 
 namespace NegocieOnline.Business.Models.Cep.Services
@@ -10,7 +11,7 @@ namespace NegocieOnline.Business.Models.Cep.Services
     {
         private readonly ICepRepository _cepRepository;
 
-        public CepService(ICepRepository cepRepository)
+        public CepService(ICepRepository cepRepository,INotification notification):base(notification)
         {
             _cepRepository = cepRepository;
         }
@@ -26,7 +27,7 @@ namespace NegocieOnline.Business.Models.Cep.Services
              return;
 
             if (await CepExistente(cep))return;
-            ;
+            
             await _cepRepository.Adicionar(cep);
 
         }
@@ -37,7 +38,7 @@ namespace NegocieOnline.Business.Models.Cep.Services
                 return;
 
             if (await CepExistente(cep)) return;
-            ;
+            
             await _cepRepository.Atualizar(cep);
 
         }
@@ -56,7 +57,11 @@ namespace NegocieOnline.Business.Models.Cep.Services
         {
             var cepAtual = await _cepRepository.Buscar(c => c.CEP == cep.CEP);
 
-            return cepAtual.Any();
+            if (!cepAtual.Any()) return false;
+
+            Notificar("Já existe este CEP cadastrado");
+
+            return true;
         }
 
     }

@@ -46,6 +46,9 @@
   <ItemGroup>
     <Compile Include="Core\Data\IRepository.cs" />
     <Compile Include="Core\Models\Entity.cs" />
+    <Compile Include="Core\Notifications\INotification.cs" />
+    <Compile Include="Core\Notifications\Notificador.cs" />
+    <Compile Include="Core\Notifications\Notifications.cs" />
     <Compile Include="Core\Service\BaseService.cs" />
     <Compile Include="Models\Cep\Cep.cs" />
     <Compile Include="Models\Cep\ICepRepository.cs" />
