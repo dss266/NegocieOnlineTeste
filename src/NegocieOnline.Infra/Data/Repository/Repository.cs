@@ -14,9 +14,9 @@ namespace NegocieOnline.Infra.Data.Repository
         protected readonly NegocieOnlineDbContext _context;
         protected readonly DbSet<TEntity> DbSet;
 
-        public Repository()
+        public Repository(NegocieOnlineDbContext context)
         {
-            _context = new NegocieOnlineDbContext();
+            _context = context;
             DbSet = _context.Set<TEntity>();
         }
         
