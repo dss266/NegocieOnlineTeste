@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentValidation, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentValidation.10.2.3\lib\netstandard2.0\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,9 +46,16 @@
   <ItemGroup>
     <Compile Include="Core\Data\IRepository.cs" />
     <Compile Include="Core\Models\Entity.cs" />
+    <Compile Include="Core\Service\BaseService.cs" />
     <Compile Include="Models\Cep\Cep.cs" />
     <Compile Include="Models\Cep\ICepRepository.cs" />
+    <Compile Include="Models\Cep\Services\CepService.cs" />
+    <Compile Include="Models\Cep\Services\ICepService.cs" />
+    <Compile Include="Models\Cep\Validations\CepValidation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

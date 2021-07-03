@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NegocieOnline.Business.Models.Cep.Validations;
 
 namespace NegocieOnline.Business.Models.Cep
 {
@@ -20,5 +21,8 @@ namespace NegocieOnline.Business.Models.Cep
         public string DDD { get; set; }
         public string Siafi { get; set; }
         public DateTime DataCadastro { get; set; }
+
+
     }
+
 }

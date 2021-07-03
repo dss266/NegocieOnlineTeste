@@ -54,6 +54,7 @@
     <Compile Include="Data\Context\NegocieOnlineDbContext.cs" />
     <Compile Include="Data\Mappings\CepConfig.cs" />
     <Compile Include="Data\Migrations\Configuration.cs" />
+    <Compile Include="Data\Repository\CepRepository.cs" />
     <Compile Include="Data\Repository\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

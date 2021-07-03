@@ -51,7 +51,7 @@ namespace NegocieOnline.Infra.Data.Mappings
                 .IsOptional()
                 .HasMaxLength(20);
 
-            ToTable("Cep");
+            ToTable("tb_Cep");
 
         }
     }
