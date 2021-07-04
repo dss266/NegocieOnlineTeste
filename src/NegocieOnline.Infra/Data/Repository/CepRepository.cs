@@ -14,9 +14,8 @@ namespace NegocieOnline.Infra.Data.Repository
                 .FirstOrDefaultAsync(c=>c.CEP == cep);
         }
 
-        public Task Dispose()
-        {
-            throw new System.NotImplementedException();
-        }
+
+        
+
     }
 }

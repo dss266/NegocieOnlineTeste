@@ -15,16 +15,11 @@ namespace NegocieOnline.Business.Models.Cep.Services
         {
             _cepRepository = cepRepository;
         }
-
-        public void Dispose()
-        {
-            _cepRepository?.Dispose();
-        }
-
+        
         public async Task Adicionar(Cep cep)
         {
-            if (!ExecutarValidacao(new CepValidation(),cep))
-             return;
+            //if (!ExecutarValidacao(new CepValidation(),cep))
+            //return;
 
             if (await CepExistente(cep))return;
             
@@ -64,5 +59,9 @@ namespace NegocieOnline.Business.Models.Cep.Services
             return true;
         }
 
+        public void Dispose()
+        {
+            _cepRepository?.Dispose();
+        }
     }
 }

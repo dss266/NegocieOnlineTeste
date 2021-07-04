@@ -6,6 +6,6 @@ namespace NegocieOnline.Business.Models.Cep
     public interface ICepRepository : IRepository<Cep>
     {
         Task<Cep> ObterCep(string cep);
-        Task Dispose();
+        
     }
 }

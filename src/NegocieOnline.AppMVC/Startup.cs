@@ -7,11 +7,11 @@ using Owin;
 [assembly: OwinStartupAttribute(typeof(NegocieOnline.AppMVC.Startup))]
 namespace NegocieOnline.AppMVC
 {
-    public partial class Startup:StartupAuth
+    public partial class Startup
     {
         public void Configuration(IAppBuilder app)
         {
-            //ConfigureAuth(app);
+            ConfigureAuth(app);
 
             DenpendecyInjectionConfig.RegisterDIContainer();
             AreaRegistration.RegisterAllAreas();
@@ -19,5 +19,7 @@ namespace NegocieOnline.AppMVC
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+
     }
 }

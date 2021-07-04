@@ -44,44 +44,44 @@
         <th></th>
     </tr>
 
-@*@foreach (var item in Model) {
+@foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.CEP)
+            @Html.DisplayFor(modelItem => item.cep)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Logradouro)
+            @Html.DisplayFor(modelItem => item.logradouro)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Complemento)
+            @Html.DisplayFor(modelItem => item.complemento)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Bairro)
+            @Html.DisplayFor(modelItem => item.bairro)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Localidade)
+            @Html.DisplayFor(modelItem => item.localidade)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Uf)
+            @Html.DisplayFor(modelItem => item.uf)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Ibge)
+            @Html.DisplayFor(modelItem => item.ibge)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Gia)
+            @Html.DisplayFor(modelItem => item.gia)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DDD)
+            @Html.DisplayFor(modelItem => item.ddd)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Siafi)
+            @Html.DisplayFor(modelItem => item.siafi)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Edit", "", new { id=item.Id }) |
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Delete", "", new { id=item.Id })
         </td>
     </tr>
-}*@
+}
 
 </table>

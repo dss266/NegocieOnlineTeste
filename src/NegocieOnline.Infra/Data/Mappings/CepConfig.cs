@@ -25,8 +25,12 @@ namespace NegocieOnline.Infra.Data.Mappings
             
             Property(f => f.Bairro)
                 .IsRequired()
-                .HasMaxLength(200);            
-            
+                .HasMaxLength(200);
+           
+            Property(f => f.Localidade)
+                .IsRequired()
+                .HasMaxLength(200);
+
             Property(f => f.DDD)
                 .IsRequired()
                 .HasMaxLength(3);            
@@ -51,7 +55,7 @@ namespace NegocieOnline.Infra.Data.Mappings
                 .IsOptional()
                 .HasMaxLength(20);
 
-            ToTable("tb_Cep");
+            ToTable("Cep");
 
         }
     }

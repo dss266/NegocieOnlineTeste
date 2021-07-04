@@ -18,7 +18,9 @@ namespace NegocieOnline.AppMVC
         {
             var container = new Container();
 
-            container.Options.DefaultLifestyle = new WebRequestLifestyle();
+            container.Options.DefaultScopedLifestyle = new WebRequestLifestyle();
+
+            InitializeContainer(container);
 
             container.RegisterMvcControllers(Assembly.GetExecutingAssembly());
 
